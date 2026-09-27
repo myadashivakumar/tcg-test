@@ -17,3 +17,11 @@ export async function createFamily(payload) {
   }
   return res.json();
 }
+
+export async function listFamilies() {
+  const res = await fetch(`${API_BASE_URL}/api/v1/families`);
+  if (!res.ok) {
+    throw new Error("Couldn't load the family list. Please try again.");
+  }
+  return res.json();
+}
