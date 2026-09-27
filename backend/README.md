@@ -1,4 +1,4 @@
-# TCG Community — Backend
+# TTCG — Backend
 
 FastAPI + raw `psycopg2` API backing the family directory, packaged to run on
 AWS Lambda (via [Mangum](https://github.com/jordaneremieff/mangum)) or locally
