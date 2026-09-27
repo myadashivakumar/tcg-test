@@ -35,7 +35,7 @@ RETURNING id, family_surname, primary_contact_name, preferred_communication, cit
 """
 
 LIST_SQL = """
-SELECT id, family_surname, primary_contact_name, preferred_communication, city, status, created_at
+SELECT *
 FROM families
 ORDER BY created_at DESC
 """
