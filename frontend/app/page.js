@@ -1,12 +1,14 @@
 import Link from "next/link";
 import SignInForm from "@/components/SignInForm";
+import PuneCommunityGraphic from "@/components/PuneCommunityGraphic";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-50">
       <div className="mx-auto grid min-h-screen max-w-5xl items-center gap-12 px-6 py-16 md:grid-cols-2">
         <div>
-          <h1 className="text-3xl font-semibold text-slate-900 sm:text-4xl">TCG Community</h1>
+          <PuneCommunityGraphic />
+          <h1 className="mt-8 text-3xl font-semibold text-slate-900 sm:text-4xl">TCG Community</h1>
           <p className="mt-3 max-w-md text-slate-600">
             Connect with Telugu families, events and services around Pune.
           </p>
