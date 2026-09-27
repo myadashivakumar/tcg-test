@@ -1,16 +1,4 @@
-from pydantic_settings import BaseSettings
+import os
 
-
-class Settings(BaseSettings):
-    database_url: str = "sqlite:///./tcg.db"
-    cors_origins: str = "http://localhost:3000"
-
-    @property
-    def cors_origin_list(self) -> list[str]:
-        return [o.strip() for o in self.cors_origins.split(",") if o.strip()]
-
-    class Config:
-        env_file = ".env"
-
-
-settings = Settings()
+DATABASE_URL = os.environ["DATABASE_URL"]
+CORS_ORIGINS = [o.strip() for o in os.environ.get("CORS_ORIGINS", "http://localhost:3000").split(",") if o.strip()]
